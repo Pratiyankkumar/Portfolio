@@ -10,22 +10,22 @@ export function LeftContainer() {
   return (
     <div className="sm:w-4/5 w-full bg-dark font-sans flex flex-col items-start ml-10 sm:ml-36 md:ml-72 justify-center">
       {/* About section - add mt-10 class */}
-      <div className="mt-10 about" id="about">
+      <div className="mt-10 about one" id="about">
         <About />
       </div>
 
       {/* Tech Stack section - add mt-6 class */}
-      <div className="mt-6 tech-stack" id="tech-stack">
+      <div className="mt-6 tech-stack two" id="tech-stack">
         <TechStack />
       </div>
 
       {/* Projects section - add mt-5 class */}
-      <div className="mt-5 projects" id="projects">
+      <div className="mt-5 projects three" id="projects">
         <Projects />
       </div>
 
       {/* Code Highlights section - add mt-6 class */}
-      <div className="mt-6 code-highlights" id="code-highlights">
+      <div className="mt-6 code-highlights four" id="code-highlights">
         <CodeHighlights name="1. Auth Middleware" codeSnippet={authCodeSnippet}>
           <Heading
             upperText="CODE"
@@ -40,7 +40,7 @@ export function LeftContainer() {
       </div>
 
       {/* Contact section - add mt-6 class */}
-      <div className="mt-6 contact" id="contact">
+      <div className="mt-6 contact five" id="contact">
         <Contact />
       </div>
     </div>

@@ -5,11 +5,11 @@ export const RightContainer = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   const navItems = [
-    { id: "about", label: "Introduction", ref: "mt-10" },
-    { id: "tech-stack", label: "Tech Stack", ref: "mt-6" },
-    { id: "projects", label: "Recent Projects", ref: "mt-5" },
-    { id: "code-highlights", label: "Code Highlights", ref: "mt-6" },
-    { id: "contact", label: "Contact Info", ref: "mt-6" },
+    { id: "about", label: "Introduction", ref: "one" },
+    { id: "tech-stack", label: "Tech Stack", ref: "two" },
+    { id: "projects", label: "Recent Projects", ref: "three" },
+    { id: "code-highlights", label: "Code Highlights", ref: "four" },
+    { id: "contact", label: "Contact Info", ref: "five" },
   ];
 
   useEffect(() => {
