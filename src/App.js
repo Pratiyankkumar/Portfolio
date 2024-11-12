@@ -65,7 +65,8 @@ export const restApiSnippet = `router.post('/users/login', async (req, res) => {
 
 export function CodeSnippet({ codeString }) {
   return (
-    <div className="md:w-width4 sm:w-width5 w-width6 xmd:w-width3 text-xs xmd:text-base">
+    <div className="md:w-width4 xsm:w-width4 w-width5 xmd:w-width3 text-xs xmd:text-base">
+      s
       <SyntaxHighlighter language="javascript" style={dracula}>
         {codeString}
       </SyntaxHighlighter>
@@ -98,7 +99,7 @@ export function Scroll() {
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos]; // Quadruple for smooth effect
 
   return (
-    <div className="overflow-hidden p-8 xmd:w-width2 md:w-width4 sm:w-width5 w-width5 rounded-md">
+    <div className="overflow-hidden p-8 xmd:w-width2 md:w-width4 w-width7 rounded-md">
       <div
         ref={containerRef}
         className="flex gap-8 overflow-x-hidden whitespace-nowrap"

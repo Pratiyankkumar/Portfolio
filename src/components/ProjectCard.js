@@ -10,7 +10,7 @@ export function ProjectCard({
   return (
     <>
       <div
-        className="flex flex-col card relative md:flex-row md:h-auto h-height1 w-width5 md:w-width4 xmd:w-auto items-center justify-evenly mt-10 p-8 rounded-md hover:bg-color1 cursor-pointer ease-in-out duration-300 group"
+        className="flex flex-col card relative xsm:flex-row xsm:h-auto h-height1 w-width5 xsm:w-width4 xmd:w-auto items-center justify-evenly mt-10 p-8 rounded-md hover:bg-color1 cursor-pointer ease-in-out duration-300 group"
         onClick={() => openLink(link)}
       >
         <img

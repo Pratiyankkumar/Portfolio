@@ -22,6 +22,7 @@ module.exports = {
         width4: "610px",
         width5: "300px",
         width6: "300px",
+        width7: "75vw",
       },
       height: {
         height1: "450px",
@@ -32,6 +33,7 @@ module.exports = {
       screens: {
         xs: "480px", // Custom screen size for extra small devices
         sm: "640px", // Small devices
+        xsm: "809px",
         md: "1084px", // Medium devices
         xmd: "1370px",
         lg: "1024px", // Large devices
