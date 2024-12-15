@@ -76,7 +76,7 @@ export const RightContainer = () => {
   };
 
   return (
-    <div className="fixed right-10 h-full md:flex hidden items-center">
+    <div className="fixed right-10 h-full xmd:flex hidden items-center">
       <div className="relative h-[80%] flex items-center">
         {/* Vertical line with scroll progress */}
         <div className="absolute left-6 h-full w-0.5 bg-gray-700">

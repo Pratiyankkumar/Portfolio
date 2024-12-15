@@ -20,7 +20,7 @@ export function LeftContainer() {
   }, []);
 
   return (
-    <div className="sm:w-4/5 w-full bg-dark font-sans flex flex-col items-start ml-10 sm:ml-36 md:ml-72 justify-center">
+    <div className="sm:w-4/5 w-full bg-dark  font-sans flex flex-col items-start ml-10 sm:ml-36 md:ml-72 justify-center">
       <div data-aos="fade-up" className="mt-10 about one" id="about">
         <About />
       </div>

@@ -5,6 +5,6 @@
 
 @layer utilities {
   .card {
-    box-shadow: 0px 0px 16px rgba(48, 39, 14, 0.545);
+    box-shadow: 0px 0px 2px rgba(77, 123, 250, 0.545);
   }
 }
