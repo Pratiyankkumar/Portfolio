@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { NaturalHighlight } from "./Highlighter";
 import { PullRequest } from "./PullRequests";
 
 interface PullRequestProps {
@@ -44,8 +45,12 @@ const contibutonsArray: PullRequestProps[] = [
 
 export function OpenSourceContributions() {
   return (
-    <div className="w-[75%] mt-16 mb-10 flex flex-col">
-      <p className="text-2xl font-bold">Open Source Contributions</p>
+    <div id="contributions" className="w-[75%] mt-16 flex flex-col">
+      <p className="text-2xl font-bold">
+        <NaturalHighlight color="#FFC107 ">
+          Open Source Contributions
+        </NaturalHighlight>
+      </p>
       <p className="text-sm mt-2 text-gray-500">
         Here’s my contribution history on GitHub, showcasing my consistency and
         passion for coding! :

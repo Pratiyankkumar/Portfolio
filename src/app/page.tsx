@@ -1,7 +1,9 @@
+import { Footer } from "@/components/components/Footer";
 import { Header } from "@/components/components/Header";
 import { Intro } from "@/components/components/Intro";
 import { OpenSourceContributions } from "@/components/components/OpenSourceContributions";
 import { Projects } from "@/components/components/Projects";
+import { TechStack } from "@/components/components/TechStack";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Intro />
       <Projects />
       <OpenSourceContributions />
+      <TechStack />
+      <Footer />
     </div>
   );
 }

@@ -7,7 +7,10 @@ import Link from "next/link";
 
 export function Intro() {
   return (
-    <div className="bp1:w-[75%] w-full mt-16 flex bp1:flex-row flex-col justify-between items-center">
+    <div
+      id="about"
+      className="bp1:w-[75%] w-full mt-16 flex bp1:flex-row flex-col justify-between items-center"
+    >
       <div className="flex gap-4 flex-col w-[70%]">
         <p className="text-4xl font-bold">
           Hello! I&apos;m Pratiyank, a{" "}
@@ -17,7 +20,7 @@ export function Intro() {
         <p className="bp1:w-[90%] w-full">
           I love building web applications that are{" "}
           <NaturalHighlight>efficient, scalable</NaturalHighlight>, and{"  "}
-          <NaturalHighlight color="#FFEB3B ">user-friendly</NaturalHighlight>.
+          <NaturalHighlight color="#FFEB3B">user-friendly</NaturalHighlight>.
         </p>
 
         <p className="bp1:w-[90%] w-full">
@@ -71,8 +74,10 @@ export function Intro() {
           </Link>
         </div>
       </div>
+
       <div className="bp1:w-[30%] w-full bp1:mt-0 mt-6 flex flex-col justify-center items-center text-center">
         {/* Centering wrapper for image */}
+
         <div
           className="relative flex justify-center items-center"
           style={{ width: "350px", height: "300px" }}
