@@ -15,3 +15,42 @@ body {
 .rough-annotation {
   z-index: -1;
 }
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Scrollbar Track (Background) */
+::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent background */
+}
+
+/* Scrollbar Handle (Thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgba(
+    75,
+    85,
+    99,
+    0.6
+  ); /* Semi-transparent dark gray (Tailwind gray-600) */
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 85, 99, 0.9); /* Darker on hover */
+}
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(75, 85, 99, 0.6) transparent;
+}

@@ -41,7 +41,7 @@ const ProjectArray: ProjectCardProps[] = [
 
 export function Projects() {
   return (
-    <div id="projects" className="w-[75%] mt-16 flex flex-col">
+    <div id="projects" className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col">
       <p className="text-2xl font-bold">
         <NaturalHighlight color="#FFEB3B">Projects</NaturalHighlight>
       </p>

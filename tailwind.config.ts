@@ -20,6 +20,9 @@ export default {
       },
       screens: {
         bp1: "1230px",
+        bp2: "600px",
+        bp3: "700px",
+        bp4: "550px",
       },
     },
   },

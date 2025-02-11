@@ -7,7 +7,7 @@ import { TechStack } from "@/components/components/TechStack";
 
 export default function Home() {
   return (
-    <div className="w-full items-center justify-center flex flex-col">
+    <div className="w-full  items-center justify-center flex flex-col">
       <Header />
       <Intro />
       <Projects />

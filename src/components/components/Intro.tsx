@@ -11,8 +11,8 @@ export function Intro() {
       id="about"
       className="bp1:w-[75%] w-full mt-16 flex bp1:flex-row flex-col justify-between items-center"
     >
-      <div className="flex gap-4 flex-col w-[70%]">
-        <p className="text-4xl font-bold">
+      <div className="flex gap-4 flex-col w-[90%] bp2:w-[70%]">
+        <p className="bp4:text-4xl text-2xl font-bold">
           Hello! I&apos;m Pratiyank, a{" "}
           <NaturalHighlight>Developer</NaturalHighlight> based in India
         </p>
@@ -79,7 +79,7 @@ export function Intro() {
         {/* Centering wrapper for image */}
 
         <div
-          className="relative flex justify-center items-center"
+          className="relative bp1:flex hidden justify-center items-center"
           style={{ width: "350px", height: "300px" }}
         >
           <Image
@@ -96,7 +96,7 @@ export function Intro() {
         </div>
 
         {/* Caption text below the image */}
-        <p className="text-gray-500 mt-3 bp1:w-[80%] w-full text-sm italic font-extralight">
+        <p className="text-gray-500 mt-3 bp1:w-[80%] hidden bp1:block w-full text-sm italic font-extralight">
           &#34;When the code breaks at 2 AM, but you know you&apos;ll fix it
           somehow.&ldquo;
         </p>

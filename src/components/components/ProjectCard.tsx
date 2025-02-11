@@ -26,7 +26,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
             <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
             <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
           </div>
-          <p className="text-xs text-gray-500 ml-4 flex-1 text-center">
+          <p className="text-xs bp2:block hidden text-gray-500 ml-4 flex-1 text-center">
             {projectLink}
           </p>
         </div>

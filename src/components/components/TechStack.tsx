@@ -2,7 +2,7 @@ import { NaturalHighlight } from "./Highlighter";
 
 export function TechStack() {
   return (
-    <div id="tech" className="w-[75%] mt-16 flex flex-col">
+    <div id="tech" className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col">
       <p className="text-2xl font-bold">
         <NaturalHighlight color="#B3E5FC">Tech Stack</NaturalHighlight>
       </p>
@@ -11,7 +11,7 @@ export function TechStack() {
       </p>
 
       <div className="flex flex-col w-full items-center justify-center">
-        <div className="flex flex-col flex-wrap w-[80%] mt-8 gap-5">
+        <div className="flex flex-col flex-wrap bp2:w-[80%] w-[90%] mt-8 gap-5">
           <p>
             Programming Language:{" "}
             <span className="font-bold">

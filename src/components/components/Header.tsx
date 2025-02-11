@@ -6,9 +6,9 @@ export function Header() {
   };
 
   return (
-    <div className="w-[75%] mt-2 flex justify-between items-center">
+    <div className="bp2:w-[75%] w-[90%] mt-2 flex justify-between items-center">
       <p className="font-bold text-lg">PRATIYANK KUMAR</p>
-      <div className="flex items-center gap-6 justify-evenly">
+      <div className="bp3:flex hidden items-center font-bold gap-6 justify-evenly">
         <p
           onClick={() => scrollToSection("about")}
           className="cursor-pointer hover:text-blue-500 hover:scale-105 transition-transform duration-200"

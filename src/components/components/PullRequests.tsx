@@ -19,7 +19,7 @@ export const PullRequest: React.FC<PullRequestProps> = ({
     <Link
       href={url}
       className={`
-        flex items-center w-[80%] p-4 rounded-lg border transition-all duration-300 ease-in-out
+        flex items-center bp2:w-[80%] w-[90%] p-4 rounded-lg border transition-all duration-300 ease-in-out
         ${
           isOpen
             ? "border-green-200 hover:border-green-400"

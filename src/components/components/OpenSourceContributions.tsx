@@ -45,7 +45,10 @@ const contibutonsArray: PullRequestProps[] = [
 
 export function OpenSourceContributions() {
   return (
-    <div id="contributions" className="w-[75%] mt-16 flex flex-col">
+    <div
+      id="contributions"
+      className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col"
+    >
       <p className="text-2xl font-bold">
         <NaturalHighlight color="#FFC107 ">
           Open Source Contributions
@@ -67,7 +70,7 @@ export function OpenSourceContributions() {
         ))}
       </div>
 
-      <div className="flex flex-col mt-8 justify-center gap-y-6 w-full items-center">
+      <div className=" bp3:flex hidden flex-col mt-8 justify-center gap-y-6 w-full items-center">
         <img
           src="https://ghchart.rshah.org/Pratiyankkumar"
           alt="GitHub Contributions Chart"
