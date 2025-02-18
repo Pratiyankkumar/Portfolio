@@ -84,21 +84,18 @@ export function Intro() {
         >
           <Image
             className="rounded-md shadow-md"
-            src="/Levi.jpg"
-            alt="levi-image"
-            width={350}
-            height={300}
-            style={{ width: "350px", height: "300px" }} // Fixed size
+            src="/pratiyank.jpg"
+            alt="pratiyank-image"
+            width={200}
+            height={200}
+            style={{ width: "230px", height: "300px" }} // Fixed size
           />
-          {/* Fix and Sleep text stays in place */}
-          <p className="absolute italic right-[76px] top-10">Fix</p>
-          <p className="absolute italic left-[70px] top-20">Sleep</p>
         </div>
 
         {/* Caption text below the image */}
         <p className="text-gray-500 mt-3 bp1:w-[80%] hidden bp1:block w-full text-sm italic font-extralight">
-          &#34;When the code breaks at 2 AM, but you know you&apos;ll fix it
-          somehow.&ldquo;
+          &quot;Coding by day, learning by night. Building web apps that
+          actually work!&quot;
         </p>
       </div>
     </div>
