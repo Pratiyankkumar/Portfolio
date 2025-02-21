@@ -39,7 +39,7 @@ const contibutonsArray: PullRequestProps[] = [
   {
     text: "Fix React prop spreading warnings in CodeEditor component ",
     url: "https://github.com/better-auth/better-auth/pull/1321",
-    state: "open",
+    state: "merged",
   },
 ];
 
