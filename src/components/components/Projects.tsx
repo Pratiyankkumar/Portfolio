@@ -10,11 +10,11 @@ interface ProjectCardProps {
 
 const ProjectArray: ProjectCardProps[] = [
   {
-    title: "Todoify",
+    title: "Frontend Forge",
     description:
-      "My Todoify application is a sleek and intuitive task management app designed with a focus on user experience and modern UI principles.",
-    projectLink: "todo-azure-five-67.vercel.app",
-    githubLink: "https://github.com/Pratiyankkumar/Todo",
+      "A platform Inspired by greatfrontend where devs can come and forge there Frontend",
+    projectLink: "frontend-forge-web.vercel.app",
+    githubLink: "https://github.com/Frontend-Forge",
   },
   {
     title: "Create Express App",
@@ -31,11 +31,11 @@ const ProjectArray: ProjectCardProps[] = [
     githubLink: "https://github.com/Pratiyankkumar/ai-notes",
   },
   {
-    title: "Chat App",
+    title: "Assignment",
     description:
-      "My Chat App is a real-time messaging application built with a focus on seamless user experience, instant communication",
-    projectLink: "chat-app-remastered.onrender.com",
-    githubLink: "https://github.com/Pratiyankkumar/Chat-App-Remastered",
+      " Converted a Figma design into a fully responsive website. Ensured pixel-perfect accuracy,Implemented animations, responsiveness, and best UI/UX practices.",
+    projectLink: "assignment-six-eta.vercel.app/",
+    githubLink: "https://github.com/Pratiyankkumar/assignment",
   },
 ];
 
