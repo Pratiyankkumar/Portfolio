@@ -8,6 +8,7 @@ interface PullRequestProps {
   text: string;
   url: string;
   state: "open" | "merged";
+  stars: number;
 }
 
 const contibutonsArray: PullRequestProps[] = [
@@ -15,31 +16,37 @@ const contibutonsArray: PullRequestProps[] = [
     text: "Fixed View Components Route in docs",
     url: "https://github.com/taqui-786/mixcnui/pull/5",
     state: "merged",
+    stars: 303,
   },
   {
     text: "Fix padding issue of Calendar card (Issue #24)",
     url: "https://github.com/arihantcodes/spectrum-ui/pull/33",
     state: "merged",
+    stars: 261,
   },
   {
-    text: "Added a new Skeleton Component",
-    url: "https://github.com/arihantcodes/spectrum-ui/pull/35",
+    text: "Added a new OTP Input Component (React Native)",
+    url: "https://github.com/tailwiinder/nativecn/pull/3",
     state: "merged",
+    stars: 59,
   },
   {
     text: "Added dark mode",
     url: "https://github.com/taqui-786/mixcnui/pull/6",
     state: "merged",
+    stars: 303,
   },
   {
     text: "Refactored/codebase By defining different classes for different operations and much more",
     url: "https://github.com/deepseek-ai/DeepSeek-V3/pull/444",
     state: "open",
+    stars: 92000,
   },
   {
     text: "Fix React prop spreading warnings in CodeEditor component ",
     url: "https://github.com/better-auth/better-auth/pull/1321",
     state: "merged",
+    stars: 10000,
   },
 ];
 
