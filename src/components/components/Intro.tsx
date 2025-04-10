@@ -80,7 +80,7 @@ export function Intro() {
 
         <div
           className="relative bp1:flex hidden justify-center items-center"
-          style={{ width: "350px", height: "300px" }}
+          style={{ width: "210px", height: "220px" }}
         >
           <Image
             className="rounded-md shadow-md"
@@ -88,14 +88,14 @@ export function Intro() {
             alt="pratiyank-image"
             width={200}
             height={200}
-            style={{ width: "230px", height: "300px" }} // Fixed size
+            style={{ width: "210px", height: "220px" }} // Fixed size
           />
         </div>
 
         {/* Caption text below the image */}
         <p className="text-gray-500 mt-3 bp1:w-[80%] hidden bp1:block w-full text-sm italic font-extralight">
-          &quot;Coding by day, learning by night. Building web apps that
-          actually work!&quot;
+          J. Cole moved the mic, I move the mouse. The difference is -- he
+          chased mastery, and I’m still chasing it.
         </p>
       </div>
     </div>

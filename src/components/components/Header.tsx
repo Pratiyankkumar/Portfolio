@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export function Header() {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -33,6 +35,12 @@ export function Header() {
         >
           Tech
         </p>
+        <Link
+          href={"/blogs"}
+          className="cursor-pointer hover:text-blue-500 hover:scale-105 transition-transform duration-200"
+        >
+          Blogs
+        </Link>
       </div>
     </div>
   );
