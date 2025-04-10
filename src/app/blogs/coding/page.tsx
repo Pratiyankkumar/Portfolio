@@ -32,10 +32,11 @@ export default function Page() {
             typed each and every line of that code , so at that time i was
             convinced that this calculator is entirely made by me infact I
             showed it to my father when he came back from college after teaching
-            that look papa I made this and obviously i didn't tell him that i
-            copied it From a youtube video, and another day i showed to my
-            brothers and friends you know just show off things and that's the
-            same thing i don't like today idk why, So this was my first Program
+            that look papa I made this and obviously i didn&apos;t tell him that
+            i copied it From a youtube video, and another day i showed to my
+            brothers and friends you know just show off things and that&apos;s
+            the same thing i don&apos;t like today idk why, So this was my first
+            Program
           </p>
         </div>
       </div>
