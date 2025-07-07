@@ -69,7 +69,7 @@ export function Intro() {
           <Link href={"https://github.com/Pratiyankkumar"}>
             <Button>View Github</Button>
           </Link>
-          <Link href={"https://www.linkedin.com/in/pratiyank-kumar-875a38333/"}>
+          <Link href={"https://www.linkedin.com/in/pratiyank/"}>
             <Button variant={"outline"}>View Linked In</Button>
           </Link>
         </div>
