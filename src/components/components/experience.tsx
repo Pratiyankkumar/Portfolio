@@ -3,7 +3,7 @@ export function Experience() {
     <div id="exp" className="w-[80%] mt-16 flex flex-col">
       <p className="text-2xl font-bold">Cool places I worked at</p>
       <p className="text-sm mt-2 text-gray-500">
-        Where I've had the opportunity to learn and contribute.
+        Where I&apos;ve had the opportunity to learn and contribute.
       </p>
 
       <div className=" rounded-xl p-6 mt-8 w-full">

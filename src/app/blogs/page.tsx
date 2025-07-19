@@ -1,4 +1,3 @@
-import { div } from "framer-motion/m";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 
