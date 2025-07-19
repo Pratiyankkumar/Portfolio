@@ -1,11 +1,7 @@
-import { NaturalHighlight } from "./Highlighter";
-
 export function TechStack() {
   return (
-    <div id="tech" className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col">
-      <p className="text-2xl font-bold">
-        <NaturalHighlight color="#B3E5FC">Tech Stack</NaturalHighlight>
-      </p>
+    <div id="tech" className="w-[80%] mt-16 flex flex-col">
+      <p className="text-2xl font-bold">Tech Stack</p>
       <p className="text-sm mt-2 text-gray-500">
         Here&lsquo;s the tech that i use to make Web Applications:
       </p>
@@ -65,6 +61,14 @@ export function TechStack() {
                 rel="noopener noreferrer"
               >
                 Express.js
+              </a>
+              ,
+              <a
+                href="https://fastapi.tiangolo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fast API
               </a>
               ,{" "}
               <a
@@ -213,6 +217,16 @@ export function TechStack() {
                 rel="noopener noreferrer"
               >
                 Numpy
+              </a>
+              ,{" "}
+            </span>
+            <span className="font-bold">
+              <a
+                href="https://www.manim.community/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Manim
               </a>
             </span>
           </p>

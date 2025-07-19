@@ -1,7 +1,21 @@
+import { div } from "framer-motion/m";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {
+  const mode = process.env.MODE;
+
+  if (mode === "prod") {
+    return (
+      <div className="w-[60%] flex flex-col items-center justify-center">
+        <p className="mt-8 w-[60%] text-center">
+          There is nothing to tell .oh wait, maybe there is, but I’m just too
+          lazy to write it right now. Check back later, or don’t. Your call!
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="w-[60%] flex flex-col items-center justify-center">
       <div>

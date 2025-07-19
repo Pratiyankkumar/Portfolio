@@ -1,89 +1,151 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { NaturalHighlight } from "./Highlighter";
-import { PullRequest } from "./PullRequests";
+import { useState, useEffect } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-interface PullRequestProps {
-  text: string;
+interface ProjectProps {
+  name: string;
   url: string;
-  state: "open" | "merged";
-  stars: number;
+  repo: string; // GitHub repo in format "owner/repo"
+  stars?: number;
+  logo?: string;
 }
 
-const contibutonsArray: PullRequestProps[] = [
+const projects: ProjectProps[] = [
   {
-    text: "Fixed View Components Route in docs",
-    url: "https://github.com/taqui-786/mixcnui/pull/5",
-    state: "merged",
-    stars: 303,
+    name: "OpenCut",
+    url: "https://github.com/OpenCut-app/OpenCut/pulls?q=author%3APratiyankkumar+is%3Amerged+",
+    repo: "OpenCut-app/OpenCut",
+    logo: "/opencut.jpg",
   },
   {
-    text: "Fix padding issue of Calendar card (Issue #24)",
-    url: "https://github.com/arihantcodes/spectrum-ui/pull/33",
-    state: "merged",
-    stars: 261,
+    name: "Better Auth",
+    url: "https://github.com/better-auth/better-auth/pulls?q=author%3APratiyankkumar+is%3Amerged+",
+    repo: "better-auth/better-auth",
+    logo: "https://avatars.githubusercontent.com/u/163827765?s=200&v=4",
   },
   {
-    text: "Added a new OTP Input Component (React Native)",
-    url: "https://github.com/tailwiinder/nativecn/pull/3",
-    state: "merged",
-    stars: 59,
+    name: "Supermemory",
+    url: "https://github.com/supermemoryai/supermemory/pulls?q=author%3APratiyankkumar+is%3Amerged+",
+    repo: "supermemoryai/supermemory",
+    logo: "https://avatars.githubusercontent.com/u/171979587?s=200&v=4",
   },
   {
-    text: "Added dark mode",
-    url: "https://github.com/taqui-786/mixcnui/pull/6",
-    state: "merged",
-    stars: 303,
-  },
-  {
-    text: "Refactored/codebase By defining different classes for different operations and much more",
-    url: "https://github.com/deepseek-ai/DeepSeek-V3/pull/444",
-    state: "open",
-    stars: 92000,
-  },
-  {
-    text: "Fix React prop spreading warnings in CodeEditor component ",
-    url: "https://github.com/better-auth/better-auth/pull/1321",
-    state: "merged",
-    stars: 10000,
+    name: "Zero",
+    url: "https://github.com/Mail-0/Zero/pulls?q=author%3APratiyankkumar+is%3Amerged+",
+    repo: "Mail-0/Zero",
+    logo: "https://avatars.githubusercontent.com/u/198371852?s=200&v=4",
   },
 ];
 
+function formatStars(stars?: number): string {
+  if (!stars) return "";
+  return stars >= 1000 ? `${(stars / 1000).toFixed(1)}k` : stars.toString();
+}
+
 export function OpenSourceContributions() {
+  const [projectsWithStars, setProjectsWithStars] =
+    useState<ProjectProps[]>(projects);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const updatedProjects = await Promise.all(
+          projects.map(async (project) => {
+            try {
+              const response = await fetch(
+                `https://api.github.com/repos/${project.repo}`
+              );
+              if (response.ok) {
+                const data = await response.json();
+                return { ...project, stars: data.stargazers_count };
+              }
+              return project;
+            } catch (error) {
+              console.error(
+                `Failed to fetch stars for ${project.repo}:`,
+                error
+              );
+              return project;
+            }
+          })
+        );
+        setProjectsWithStars(updatedProjects);
+      } catch (error) {
+        console.error("Failed to fetch repository data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStars();
+  }, []);
   return (
-    <div
-      id="contributions"
-      className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col"
-    >
-      <p className="text-2xl font-bold">
-        <NaturalHighlight color="#FFC107 ">
-          Open Source Contributions
-        </NaturalHighlight>
-      </p>
+    <div id="contributions" className="w-[80%] mt-16 flex flex-col">
+      <p className="text-2xl font-bold">Open Source Contributions</p>
       <p className="text-sm mt-2 text-gray-500">
-        Here’s my contribution history on GitHub, showcasing my consistency and
-        passion for coding! :
+        Not to brag, but here are some open source projects lucky enough to have
+        my contributions 🥱.
       </p>
 
-      <div className="flex flex-col mt-8 justify-center gap-y-6 w-full items-center">
-        {contibutonsArray.map((contri, i) => (
-          <PullRequest
-            text={contri.text}
-            url={contri.url}
-            state={contri.state}
-            key={i}
-          />
-        ))}
-      </div>
-
-      <div className=" bp3:flex hidden flex-col mt-8 justify-center gap-y-6 w-full items-center">
-        <img
-          src="https://ghchart.rshah.org/Pratiyankkumar"
-          alt="GitHub Contributions Chart"
-          className="w-[80%]"
-        />
-      </div>
+      <TooltipProvider delayDuration={100}>
+        <div className="border border-dashed border-gray-300 rounded-xl p-6 mt-8 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {projectsWithStars.map((project, i) => (
+              <div
+                key={i}
+                className={`flex flex-col items-center text-center relative ${
+                  i !== projectsWithStars.length - 1
+                    ? "border-r border-gray-300 pr-4"
+                    : "pr-4"
+                }`}
+              >
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div className="group flex flex-col items-center">
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center transition-all duration-300 ease-out group-hover:-translate-y-2"
+                      >
+                        {project.logo ? (
+                          <img
+                            src={project.logo}
+                            alt={`${project.name} logo`}
+                            className="w-16 h-16 rounded-lg object-cover transition-all duration-300 ease-out group-hover:shadow-lg"
+                          />
+                        ) : (
+                          <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center text-sm font-semibold text-gray-500 border border-gray-200 transition-all duration-300 ease-out group-hover:shadow-lg">
+                            +
+                          </div>
+                        )}
+                        <span className="mt-2 text-sm font-medium text-center">
+                          {project.name}
+                        </span>
+                      </a>
+                    </div>
+                  </TooltipTrigger>
+                  {project.stars !== undefined && (
+                    <TooltipContent side="top" align="center">
+                      <p>
+                        ⭐ {loading ? "..." : formatStars(project.stars)} stars
+                      </p>
+                    </TooltipContent>
+                  )}
+                </Tooltip>
+              </div>
+            ))}
+          </div>
+        </div>
+      </TooltipProvider>
     </div>
   );
 }

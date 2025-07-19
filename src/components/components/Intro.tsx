@@ -1,102 +1,56 @@
-"use client";
-
 import Image from "next/image";
-import { NaturalHighlight } from "./Highlighter";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
 export function Intro() {
   return (
-    <div
-      id="about"
-      className="bp1:w-[75%] w-full mt-16 flex bp1:flex-row flex-col justify-between items-center"
-    >
+    <div id="about" className="w-[80%] mt-16 flex justify-between items-center">
       <div className="flex gap-4 flex-col w-[90%] bp2:w-[70%]">
-        <p className="bp4:text-4xl text-2xl font-bold">
-          Hello! I&apos;m Pratiyank, a{" "}
-          <NaturalHighlight>Developer</NaturalHighlight> based in India
-        </p>
+        <p className="bp4:text-4xl text-2xl font-bold">Hello, I am Pratiyank</p>
 
-        <p className="bp1:w-[90%] w-full">
-          I love building web applications that are{" "}
-          <NaturalHighlight>efficient, scalable</NaturalHighlight>, and{"  "}
-          <NaturalHighlight color="#FFEB3B">user-friendly</NaturalHighlight>.
-        </p>
+        <p className="text-lg text-gray-600">17 year old kid</p>
 
-        <p className="bp1:w-[90%] w-full">
-          I have gained experience in{" "}
-          <NaturalHighlight color="#FFC107 ">
-            MERN stack development
-          </NaturalHighlight>{" "}
-          by working on real-world projects that involve building dynamic and
-          responsive web applications. I enjoy creating full-stack solutions,{" "}
-          <NaturalHighlight color="#FF9800">
-            optimizing performance
-          </NaturalHighlight>
-          , and ensuring a seamless user experience.
-        </p>
-        <p className="bp1:w-[90%] w-full">
-          Through these experiences, I have developed strong{" "}
-          <NaturalHighlight color="#B3E5FC">
-            problem-solving skills
-          </NaturalHighlight>{" "}
-          and an ability to build full-stack applications with a focus on
-          performance, security, and great user experience.
-        </p>
-        <p className="bp1:w-[90%] w-full">
-          I also have an interest in{" "}
-          <NaturalHighlight color="#FFCDD2 ">
-            DSA (Data Structures & Algorithms)
-          </NaturalHighlight>{" "}
-          and stock trading, continuously improving my skills in these areas.
-        </p>
+        <div className="mt-4">
+          <h2 className="text-xl font-semibold mb-2">About</h2>
 
-        <p className="bp1:w-[90%] w-full">
-          I&lsquo;m currently looking for opportunities to apply my knowledge
-          and grow as a developer. Interested in working together? {"   "}
-          <NaturalHighlight action="circle">
-            <Link
-              href={
-                "https://mail.google.com/mail/u/0/?fs=1&to=pratiyank49@gmail.com&tf=cm"
-              }
-            >
-              <span className="font-bold">Let&lsquo;s connect!</span>
-            </Link>
-          </NaturalHighlight>
-        </p>
+          <p className="bp1:w-[90%] text-gray-500 text-sm w-full mb-3">
+            Self guided and studied most of the stuff from YouTube.
+          </p>
 
-        <div className="flex gap-4 flex-row">
+          <p className="bp1:w-[90%] text-gray-500 text-sm w-full mb-3">
+            When I discovered that AI and ML are basically advanced math in
+            disguise, I knew I had to dive in.
+          </p>
+
+          <p className="bp1:w-[90%] text-gray-500 text-sm w-full">
+            Also, HipHop runs through my veins.
+          </p>
+        </div>
+
+        <div className="flex gap-4 flex-row mt-6">
           <Link href={"https://github.com/Pratiyankkumar"}>
             <Button>View Github</Button>
           </Link>
           <Link href={"https://www.linkedin.com/in/pratiyank/"}>
-            <Button variant={"outline"}>View Linked In</Button>
+            <Button variant={"outline"}>View LinkedIn</Button>
           </Link>
         </div>
       </div>
 
-      <div className="bp1:w-[30%] w-full bp1:mt-0 mt-6 flex flex-col justify-center items-center text-center">
-        {/* Centering wrapper for image */}
-
+      <div className="bp1:w-[30%] w-full -mt-44 flex flex-col justify-center items-center text-center">
         <div
-          className="relative bp1:flex hidden justify-center items-center"
-          style={{ width: "210px", height: "220px" }}
+          className="relative sm:flex hidden justify-center items-center"
+          style={{ width: "120px", height: "120px" }}
         >
           <Image
-            className="rounded-md shadow-md"
+            className="rounded-full shadow-md"
             src="/pratiyank.jpg"
             alt="pratiyank-image"
-            width={200}
-            height={200}
-            style={{ width: "210px", height: "220px" }} // Fixed size
+            width={120}
+            height={120}
+            style={{ width: "120px", height: "120px" }}
           />
         </div>
-
-        {/* Caption text below the image */}
-        <p className="text-gray-500 mt-3 bp1:w-[80%] hidden bp1:block w-full text-sm italic font-extralight">
-          J. Cole moved the mic, I move the mouse. The difference is -- he
-          chased mastery, and I’m still chasing it.
-        </p>
       </div>
     </div>
   );

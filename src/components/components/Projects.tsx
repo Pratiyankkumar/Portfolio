@@ -1,4 +1,3 @@
-import { NaturalHighlight } from "./Highlighter";
 import ProjectCard from "./ProjectCard";
 
 interface ProjectCardProps {
@@ -41,10 +40,8 @@ const ProjectArray: ProjectCardProps[] = [
 
 export function Projects() {
   return (
-    <div id="projects" className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col">
-      <p className="text-2xl font-bold">
-        <NaturalHighlight color="#FFEB3B">Projects</NaturalHighlight>
-      </p>
+    <div id="projects" className="w-[80%] mt-16 flex flex-col">
+      <p className="text-2xl font-bold">Projects</p>
       <p className="text-sm mt-2 text-gray-500">
         Some of my side Projects, Currently Working on :
       </p>

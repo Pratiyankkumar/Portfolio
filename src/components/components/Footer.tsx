@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <div className=" bp2:w-[75%] w-[90%] mt-16 flex flex-col mb-10">
+    <div className="w-[80%] mt-16 flex flex-col mb-10">
       <div className="flex flex-row flex-wrap gap-4 items-center">
         <p className="text-gray-500 hover:text-black text-sm">
           Made with 💖 by Pratiyank

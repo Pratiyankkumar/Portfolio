@@ -23,6 +23,7 @@ export default {
         bp2: "600px",
         bp3: "700px",
         bp4: "550px",
+        xs: "440px",
       },
     },
   },
