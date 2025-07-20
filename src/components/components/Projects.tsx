@@ -33,7 +33,7 @@ const ProjectArray: ProjectCardProps[] = [
     title: "Assignment",
     description:
       " Converted a Figma design into a fully responsive website. Ensured pixel-perfect accuracy,Implemented animations, responsiveness, and best UI/UX practices.",
-    projectLink: "assignment-six-eta.vercel.app/",
+    projectLink: "assignment-six-eta.vercel.app",
     githubLink: "https://github.com/Pratiyankkumar/assignment",
   },
 ];
