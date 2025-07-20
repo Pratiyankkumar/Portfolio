@@ -11,7 +11,7 @@ const ProjectArray: ProjectCardProps[] = [
   {
     title: "Frontend Forge",
     description:
-      "A platform Inspired by greatfrontend where devs can come and forge there Frontend",
+      "A platform Inspired by greatfrontend where devs can come and practice there Frontend",
     projectLink: "frontend-forge-web.vercel.app",
     githubLink: "https://github.com/Frontend-Forge",
   },
