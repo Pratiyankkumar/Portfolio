@@ -18,6 +18,10 @@ export function Intro() {
           </p>
 
           <p className="bp1:w-[90%] text-gray-500 text-sm w-full mb-3">
+            I love python idk why.
+          </p>
+
+          <p className="bp1:w-[90%] text-gray-500 text-sm w-full mb-3">
             When I discovered that AI and ML are basically advanced math in
             disguise, I knew I had to dive in.
           </p>
