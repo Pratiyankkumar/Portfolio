@@ -8,7 +8,7 @@ export function Intro() {
       <div className="flex gap-4 flex-col w-[90%] bp2:w-[70%]">
         <p className="bp4:text-4xl text-2xl font-bold">Hello, I am Pratiyank</p>
 
-        <p className="text-lg text-gray-600">17 year old kid</p>
+        <p className="text-lg text-gray-600">18 year old kid</p>
 
         <div className="mt-4">
           <h2 className="text-xl font-semibold mb-2">About</h2>
