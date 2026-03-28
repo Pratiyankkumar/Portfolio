@@ -1,34 +1,44 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Open_Sans } from "next/font/google";
+import type { ReactNode } from "react";
+import { Newsreader } from "next/font/google";
+import { portfolio } from "@/data/portfolio";
+import { ThemeToggle } from "@/components/theme-toggle";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const newsreader = Newsreader({
+  variable: "--font-newsreader",
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Pratiyank",
-  description: "Portfolio of Pratiyank",
+  title: `${portfolio.name} · Portfolio`,
+  description: portfolio.tagline,
+  icons: { icon: "/favicon.ico" },
 };
+
+const themeInitScript = `
+(function() {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark') document.documentElement.classList.add('dark');
+    else if (t === 'light') document.documentElement.classList.remove('dark');
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`;
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  ${openSans.className} antialiased flex justify-center items-center`}
+        className={`${newsreader.variable} min-h-screen bg-background font-sans text-foreground antialiased`}
       >
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <ThemeToggle />
         {children}
       </body>
     </html>

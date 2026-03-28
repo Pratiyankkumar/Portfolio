@@ -2,55 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --radius: 0.5rem;
+    /* Warm yellow-white paper tone */
+    --background: #f8f2df;
+    --foreground: #1c1e1a;
+    --highlight: #eadfae;
+    --texture-opacity: 0.18;
+  }
+
+  .dark {
+    /* Charcoal with a whisper of green — not pitch black */
+    --background: #161917;
+    --foreground: #e6e9e3;
+    --highlight: #243024;
+    --texture-opacity: 0.1;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    font-family: var(--font-newsreader), Georgia, serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: var(--texture-opacity);
+    background-image:
+      radial-gradient(circle at 24% 28%, rgba(110, 95, 55, 0.17) 0 0.8px, transparent 1px),
+      radial-gradient(circle at 76% 74%, rgba(90, 80, 45, 0.14) 0 0.7px, transparent 0.9px),
+      radial-gradient(circle at 42% 62%, rgba(70, 62, 38, 0.12) 0 0.7px, transparent 0.95px);
+    background-size: 9px 9px, 11px 11px, 13px 13px;
   }
 }
 
-.rough-annotation {
-  z-index: -1;
+/* View Transitions API: circular reveal for theme (see MDN / Chrome docs) */
+@supports (view-transition-name: none) {
+  ::view-transition-group(root) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-old(root) {
+    z-index: 1;
+    animation: none;
+  }
+
+  ::view-transition-new(root) {
+    z-index: 2;
+    animation: vt-theme-circle 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-/* Scrollbar Track (Background) */
-::-webkit-scrollbar-track {
-  background: transparent; /* Fully transparent background */
-}
-
-/* Scrollbar Handle (Thumb) */
-::-webkit-scrollbar-thumb {
-  background: rgba(
-    75,
-    85,
-    99,
-    0.6
-  ); /* Semi-transparent dark gray (Tailwind gray-600) */
-  border-radius: 8px;
-  transition: background 0.3s ease-in-out;
-}
-
-/* Scrollbar Handle on Hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(75, 85, 99, 0.9); /* Darker on hover */
-}
-
-/* Scrollbar for Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(75, 85, 99, 0.6) transparent;
+@keyframes vt-theme-circle {
+  from {
+    clip-path: circle(0px at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
+  to {
+    clip-path: circle(150vmax at var(--vt-x, 50%) var(--vt-y, 50%));
+  }
 }

@@ -12,6 +12,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        highlight: "var(--highlight)",
+      },
+      fontFamily: {
+        sans: ["var(--font-newsreader)", "Georgia", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
