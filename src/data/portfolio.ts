@@ -26,6 +26,12 @@ export const portfolio = {
       live: "https://npmjs.com/package/@pratiyank/create-express-app",
       github: "https://github.com/Pratiyankkumar/create-express-app",
     },
+    {
+      name: "AI Educational Video Generator",
+      description:
+        "A tool that generates educational videos from text prompts using AI.",
+      live: "https://testing-theta-eosin.vercel.app/",
+    },
   ],
   experience: [
     {
@@ -66,3 +72,4 @@ export const portfolio = {
     other: ["NumPy", "Manim"],
   },
 } as const;
+
