@@ -37,8 +37,14 @@ export const portfolio = {
     {
       company: "VideoTutor",
       url: "https://videotutor.io",
+      role: "Software Engineer",
+      period: "May 2026 - Present",
+    },
+    {
+      company: "VideoTutor",
+      url: "https://videotutor.io",
       role: "Software Engineer Intern",
-      period: "April 2025 - Present",
+      period: "April 2025 - May 2026 (1 Year and 2 Months)",
     },
     {
       company: "Nspira",
